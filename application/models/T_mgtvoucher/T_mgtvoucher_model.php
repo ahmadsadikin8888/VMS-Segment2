@@ -22,6 +22,11 @@ class T_mgtvoucher_model extends CI_Model {
 			t_mgtvoucher.end_datelive as end_datelive,
 			t_mgtvoucher.wording as wording,
 			t_mgtvoucher.image as image,
+			t_mgtvoucher.kode_voucher as kode_voucher,
+			t_mgtvoucher.already_subscribe as already_subscribe,
+			t_mgtvoucher.periode_time as periode_time,
+			t_mgtvoucher.minimum_payment as minimum_payment,
+			t_mgtvoucher.max_nominal as max_nominal,
 		');
 		
 		$this->datatables->from('t_mgtvoucher');
@@ -47,6 +52,11 @@ class T_mgtvoucher_model extends CI_Model {
 			't_mgtvoucher.end_datelive as end_datelive',
 			't_mgtvoucher.wording as wording',
 			't_mgtvoucher.image as image',
+			't_mgtvoucher.kode_voucher as kode_voucher',
+			't_mgtvoucher.already_subscribe as already_subscribe',
+			't_mgtvoucher.periode_time as periode_time',
+			't_mgtvoucher.minimum_payment as minimum_payment',
+			't_mgtvoucher.max_nominal as max_nominal',
 		
 		);
 		$this->db->select($afield);
@@ -69,6 +79,12 @@ class T_mgtvoucher_model extends CI_Model {
 			't_mgtvoucher.end_datelive as end_datelive',
 			't_mgtvoucher.wording as wording',
 			't_mgtvoucher.image as image',
+			't_mgtvoucher.kode_voucher as kode_voucher',
+			't_mgtvoucher.already_subscribe as already_subscribe',
+			't_mgtvoucher.periode_time as periode_time',
+			't_mgtvoucher.minimum_payment as minimum_payment',
+			't_mgtvoucher.max_nominal as max_nominal',
+
 		
 		);
 		$this->db->select($afield);

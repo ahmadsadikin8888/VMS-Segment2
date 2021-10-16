@@ -25,6 +25,7 @@
 					<th><b>Start Datelive</b></th>
 					<th><b>End Date Live</b></th>
 					<th><b>Wording</b></th>
+					<th><b>Action</b></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -52,6 +53,8 @@
 							<td><?php echo $datana->start_datelive; ?></td>
 							<td><?php echo $datana->end_datelive; ?></td>
 							<td><?php echo $datana->wording; ?></td>
+							<td><button type="button" class="btn-apply"><a href="<?php echo base_url() . 'T_mgtvoucher/T_mgtvoucher/update/' . $datana->id; ?>">EDIT</a></button><button type="button" class="btn-success"><a href="<?php echo base_url() . 'T_mgtvoucher/T_mgtvoucher/detail/' . $datana->id; ?>">DETAIL</a></button></td>
+
 						</tr>
 				<?php
 						$nomor++;

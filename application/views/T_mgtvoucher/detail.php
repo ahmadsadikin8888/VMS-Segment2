@@ -4,7 +4,7 @@
 <div class="card col-12">
 	<div class="card-status bg-green"></div>
 	<div class="card-header">
-		<h3 class="card-title">Form</h3>
+		<h3 class="card-title">Detail Voucher</h3>
 		<div class="card-options"><a href="javascript:void(0)" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a><a href="javascript:void(0)" class="card-options-fullscreen" data-toggle="card-fullscreen"><i class="fe fe-maximize"></i></a></div>
 	</div>
 	<div class="card-body">
@@ -265,57 +265,4 @@ $('.data-sending').keydown(function(e){
 });
 
 </script>
-
-<script>
-$('.input-simple-date').datepicker({ 
-		autoclose: true ,
-		format:'dd.mm.yyyy',
- })
-
-$('#btn-save').click(function(){
-	simpan();
-})
-
-
-function cancel(){
-	$.each(custom_select,function(key,val){
-		val.selectize.enable();
-	});
-	<?php 
-	// NOTE : FOR ENABLE CUSTOM-SELECT-LINK  
-	?>
-	// $.each(custom_select_link,function(key,val){
-	// 		val.selectize.enable();
-	// });
-	
-	
-	$('#btn-save').attr('disabled',true);
-	
-}
-
-
-function simpan(){
-	<?php
-	/* mengambil data yang akan di kirim dari form-a */
-	/* dalam bentuk array json tanpa penutup.. */
-	/* memungkinkan penambahan data dengan cara push */
-	/* ex. data.push */
-	?>
-	var data = get_dataSending('form-a');
-	
-	<?php
-	/* complite json format */
-	/* ybs_dataSending(array); */
-	?>
-	send_data = ybs_dataSending(data);
-
-	var a = new ybsRequest();
-	a.process('<?php echo $link_save?>',send_data,'POST');
-	a.onAfterSuccess = function(){
-			cancel();
-	}
-	a.onBeforeFailed = function(){
-			cancel();
-	}
-}
 </script>
