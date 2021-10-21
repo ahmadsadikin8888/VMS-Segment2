@@ -37,8 +37,8 @@
 				?>
 						<tr>
 							<td><?php echo $nomor; ?></td>
-							<td><img src="<?php echo base_url() ?>assets/contohvoucher.jpg"></td>
-							<td><?php echo $datana->nama_voucher; ?></td>
+							<td><img src="<?php if (isset($data)) echo $data->image ?>"></td>
+							<td><?php echo $datana->image; ?></td>
 							<td>
 								<label class="custom-switch">
 									<input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input">

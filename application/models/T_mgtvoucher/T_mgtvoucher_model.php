@@ -27,6 +27,17 @@ class T_mgtvoucher_model extends CI_Model {
 			t_mgtvoucher.periode_time as periode_time,
 			t_mgtvoucher.minimum_payment as minimum_payment,
 			t_mgtvoucher.max_nominal as max_nominal,
+			t_mgtvoucher.special_day as special_day,
+			t_mgtvoucher.regional as regional,
+			t_mgtvoucher.witel as witel,
+			t_mgtvoucher.addon as addon,
+			t_mgtvoucher.type_customer as type_customer,
+			t_mgtvoucher.type_hvc as type_hvc,
+			t_mgtvoucher.val_nominal as val_nominal,
+			t_mgtvoucher.val_percent as val_percent,
+			t_mgtvoucher.limited_val as limited_val,
+			t_mgtvoucher.islimited as islimited,
+			t_mgtvoucher.unlimited as unlimited,
 		');
 		
 		$this->datatables->from('t_mgtvoucher');
@@ -57,6 +68,17 @@ class T_mgtvoucher_model extends CI_Model {
 			't_mgtvoucher.periode_time as periode_time',
 			't_mgtvoucher.minimum_payment as minimum_payment',
 			't_mgtvoucher.max_nominal as max_nominal',
+			't_mgtvoucher.special_day as special_day',
+			't_mgtvoucher.regional as regional',
+			't_mgtvoucher.witel as witel',
+			't_mgtvoucher.addon as addon',
+			't_mgtvoucher.type_customer as type_customer',
+			't_mgtvoucher.type_hvc as type_hvc',
+			't_mgtvoucher.val_nominal as val_nominal',
+			't_mgtvoucher.val_percent as val_percent',
+			't_mgtvoucher.limited_val as limited_val',
+			't_mgtvoucher.islimited as islimited',
+			't_mgtvoucher.unlimited as unlimited',
 		
 		);
 		$this->db->select($afield);
@@ -84,6 +106,17 @@ class T_mgtvoucher_model extends CI_Model {
 			't_mgtvoucher.periode_time as periode_time',
 			't_mgtvoucher.minimum_payment as minimum_payment',
 			't_mgtvoucher.max_nominal as max_nominal',
+			't_mgtvoucher.special_day as special_day',
+			't_mgtvoucher.regional as regional',
+			't_mgtvoucher.witel as witel',
+			't_mgtvoucher.addon as addon',
+			't_mgtvoucher.type_customer as type_customer',
+			't_mgtvoucher.type_hvc as type_hvc',
+			't_mgtvoucher.val_nominal as val_nominal',
+			't_mgtvoucher.val_percent as val_percent',
+			't_mgtvoucher.limited_val as limited_val',
+			't_mgtvoucher.islimited as islimited',
+			't_mgtvoucher.unlimited as unlimited',
 
 		
 		);

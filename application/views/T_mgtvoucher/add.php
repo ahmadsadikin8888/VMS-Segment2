@@ -41,7 +41,7 @@
 				<td>Special Day</td>
 				<td>
 					<input required type='text' class='form data-sending focus-color col-5' id='special_day' name='special_day' placeholder='<?php echo $title->general->desc_required ?>' value='<?php if (isset($data)) echo $data->kode_voucher ?>'>
-					<input required type='date' class='form data-sending focus-color col-2' id='special_day_date' name='special_day_date'>
+					<input required type='date' class='form data-sending focus-color col-2' id='special_day' name='special_day'>
 				</td>
 			</tr>
 			<tr>
@@ -70,7 +70,7 @@
 			</tr>
 			<tr>
 				<td>Regional</td>
-				<td> <select required name='regional[]' id="select-regional" class="form custom-select col-5" multiple="multiple">
+				<td> <select required name='regional[]' id="regional" class="form custom-select col-5" multiple="multiple">
 						<option value="0">--Semua Regional--</option>
 						<option value="1">Regional 1</option>
 						<option value="2">Regional 2</option>
@@ -83,14 +83,14 @@
 			</tr>
 			<tr>
 				<td>Witel</td>
-				<td> <select required name='witel[]' id="select-witel" class="form custom-select col-5" multiple="multiple">
+				<td> <select required name='witel[]' id="witel" class="form custom-select col-5" multiple="multiple">
 						<option value="0">--Semua Witel--</option>
 
 					</select></td>
 			</tr>
 			<tr>
 				<td>Channel Payment</td>
-				<td> <select required name='channel_payment[]' id="select-agent" class="form custom-select col-5" multiple="multiple">
+				<td> <select required name='channel_payment[]' id="channel_payment" class="form custom-select col-5" multiple="multiple">
 						<option value="0">--Semua Channel--</option>
 						<?php
 						if (count($list_agent_d->result()) > 0) {
@@ -112,7 +112,7 @@
 
 			<tr>
 				<td>Jenis pembayaran</td>
-				<td> <select required name='jenis_pembayaran[]' id="select-agent" class="form custom-select col-5" multiple="multiple">
+				<td> <select required name='jenis_pembayaran[]' id="jenis_pembayaran" class="form custom-select col-5" multiple="multiple">
 						<option value="0">--Semua Jenis Pembayaran--</option>
 						<option value="1">Postpaid</option>
 						<option value="2">Prepaid</option>
@@ -120,7 +120,7 @@
 			</tr>
 			<tr>
 				<td>Addon</td>
-				<td> <select required name='addon[]' id="select-agent" class="form custom-select col-5" multiple="multiple">
+				<td> <select required name='addon[]' id="addon" class="form custom-select col-5" multiple="multiple">
 						<option value="0">--Semua Addon--</option>
 						<option value="1">Postpaid</option>
 						<option value="2">Prepaid</option>
@@ -128,7 +128,7 @@
 			</tr>
 			<tr>
 				<td>Type Customer</td>
-				<td> <select required name='addon[]' id="select-agent" class="form custom-select col-5" multiple="multiple">
+				<td> <select required name='addon[]' id="type_customer" class="form custom-select col-5" multiple="multiple">
 						<option value="0">--Semua Type--</option>
 						<option value="1">1P</option>
 						<option value="2">2P</option>
@@ -138,7 +138,7 @@
 			</tr>
 			<tr>
 				<td>Type HVC</td>
-				<td> <select required name='hvc[]' id="select-agent" class="form custom-select col-5" multiple="multiple">
+				<td> <select required name='hvc[]' id="type_hvc" class="form custom-select col-5" multiple="multiple">
 						<option value="0">--Semua Type--</option>
 						<option value="bronze">Bronze</option>
 						<option value="silver">Silver</option>
@@ -156,7 +156,7 @@
 			<tr>
 				<td>Jenis Voucher</td>
 				<td>
-					<select required name='jenis_cashback' id="select-agent" class="form custom-select col-5">
+					<select required name='jenis_cashback' id="jenis_cashback" class="form custom-select col-5">
 						<option value="1">Discount</option>
 						<option value="2">Cashback</option>
 					</select>
@@ -178,7 +178,7 @@
 						</tr>
 						<tr>
 							<td>
-								<input type="radio" id="val_percent" class="form data-sending focus-color" name="value" value="val_percent">
+								<input type="radio" id="val_percent" class="form data-sending focus-color" name="val_percent" value="<?php if (isset($data)) echo $data->val_percent ?>">
 								<label for="val_percent">Percent</label>
 							</td>
 							<td>
@@ -198,12 +198,12 @@
 								<label for="limited">Limited</label>
 							</td>
 							<td>
-								<input type='number' class='form data-sending focus-color col-2' id='limited_val' name='limited_val' placeholder='<?php echo $title->general->desc_required ?>' value='<?php if (isset($data)) echo $data->nominal_cashback ?>'><br>
+								<input type='number' class='form data-sending focus-color col-2' id='limited_val' name='limited_val' placeholder='<?php echo $title->general->desc_required ?>' value='<?php if (isset($data)) echo $data->limited_val ?>'><br>
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<input type="radio" id="unlimited" class="form data-sending focus-color" name="limited" value="unlimited">
+								<input type="radio" id="unlimited" class="form data-sending focus-color" name="unlimited" value="unlimited">
 								<label for="unlimited">Unlimited</label>
 							</td>
 							
@@ -222,7 +222,7 @@
 		<div class='col-md-12 col-xl-12'>
 			<div class='form-group'>
 				<label class='form-label'>Wording</label>
-				<textarea class="temp_wa data-sending" name="temp_wa"><?php if (isset($data)) echo $data->wording ?></textarea>
+				<textarea class="wording data-sending" name="wording" id="wording"><?php if (isset($data)) echo $data->wording ?></textarea>
 			</div>
 		</div>
 
