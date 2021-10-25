@@ -37,7 +37,7 @@
 				?>
 						<tr>
 							<td><?php echo $nomor; ?></td>
-							<td><img src='.base_url("assets/voucher/".$datana->image.).' width='70' height='90'></td>
+							<td><img src="<?php echo base_url("assets/voucher/".$datana->image)?>"></td>
 							<td><?php echo $datana->nama_voucher; ?></td>
 							<td>
 								<label class="custom-switch">

@@ -203,7 +203,7 @@
 		<table>
 			<tr>
 				<td><b>Preview Gambar</b></td>
-				<td><?php if (isset($data)) echo $data->image ?></td>
+				<td><img src="<?php echo base_url("assets/voucher/".$data->image)?>"></td>
 			</tr>
 		</table>
 		</form>
