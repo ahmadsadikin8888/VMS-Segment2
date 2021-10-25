@@ -70,7 +70,7 @@
 			</tr>
 			<tr>
 				<td>Regional</td>
-				<td> <select required name='regional[]' id="regional" class="form custom-select col-5" multiple="multiple">
+				<td> <select required name='regional' id="regional" class="form custom-select col-5" multiple="multiple">
 						<option value="0">--Semua Regional--</option>
 						<option value="1">Regional 1</option>
 						<option value="2">Regional 2</option>
@@ -83,14 +83,14 @@
 			</tr>
 			<tr>
 				<td>Witel</td>
-				<td> <select required name='witel[]' id="witel" class="form custom-select col-5" multiple="multiple">
+				<td> <select required name='witel' id="witel" class="form custom-select col-5" multiple="multiple">
 						<option value="0">--Semua Witel--</option>
 
 					</select></td>
 			</tr>
 			<tr>
 				<td>Channel Payment</td>
-				<td> <select required name='channel_payment[]' id="channel_payment" class="form custom-select col-5" multiple="multiple">
+				<td> <select required name='channel_payment' id="channel_payment" class="form custom-select col-5" multiple="multiple">
 						<option value="0">--Semua Channel--</option>
 						<?php
 						if (count($list_agent_d->result()) > 0) {
@@ -112,7 +112,7 @@
 
 			<tr>
 				<td>Jenis pembayaran</td>
-				<td> <select required name='jenis_pembayaran[]' id="jenis_pembayaran" class="form custom-select col-5" multiple="multiple">
+				<td> <select required name='jenis_pembayaran' id="jenis_pembayaran" class="form custom-select col-5" multiple="multiple">
 						<option value="0">--Semua Jenis Pembayaran--</option>
 						<option value="1">Postpaid</option>
 						<option value="2">Prepaid</option>
